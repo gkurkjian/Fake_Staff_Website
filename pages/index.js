@@ -1,8 +1,6 @@
 import Link from 'next/link'
-import load from './staff';
 
 export default function Home() {
-  console.log(load())
   return (
     <>
     <main style={{ backgroundColor: '#fff', color: '#000'}}>

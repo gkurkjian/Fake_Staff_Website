@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import  UserCard  from '../pages/components/UserCard'
 
 export default function StaffPage() {
   const [users, setUsers] = useState([])
@@ -7,7 +8,7 @@ export default function StaffPage() {
   useEffect(() => {
     fetch('https://reqres.in/api/users?page=2', {
       headers: {
-        'x-api-key': 'reqres-free-v1',
+        'x-api-key': 'reqres-free-v1',  // This header was needed in order to fetch the data, before was showing 401 error
       },
     }).then((res) => {
         if (!res.ok) throw new Error(`HTTP ${res.status}`)
@@ -19,12 +20,11 @@ export default function StaffPage() {
 
   return (
     <main>
-      <h1>Our Staff</h1>
+      <h1 >Our Staff</h1>
       <ul>
         {users.map((user) => (
           <>
-            <ul key={user?.id}>User ID: {user?.id}</ul>
-            <ul key={user?.first_name}>Name: {user?.first_name}</ul>
+            <UserCard user={user}/>
           </>
         ))}
       </ul>
