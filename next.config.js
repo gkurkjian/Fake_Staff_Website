@@ -2,8 +2,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['reqres.in'], // ✅ Allow external images from reqres.in
-  },
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'reqres.in',
+      }
+    ]
+  }
 }
 
 module.exports = nextConfig

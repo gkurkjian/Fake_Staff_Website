@@ -1,9 +1,11 @@
 // pages/_app.js
 import '../styles/globals.css'
+import { UserProvider } from '../context/UserContext';
 
 export default function MyApp({ Component, pageProps }) {
   return (
-    <div className="layout">
+    <UserProvider>
+          <div className="layout">
       <header>
         <h1>Fake Staff Directory</h1>
       </header>
@@ -16,5 +18,6 @@ export default function MyApp({ Component, pageProps }) {
         <p>© 2025 My Fake Staff App</p>
       </footer>
     </div>
+    </UserProvider>
   )
 }
