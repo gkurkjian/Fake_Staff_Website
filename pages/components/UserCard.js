@@ -7,7 +7,7 @@ function Avatar({ src, alt, width, height }) {
       alt={alt} 
       width={width} 
       height={height}
-      style={{ borderRadius: '100%' }}
+      style={{ borderRadius: '100%' }}  
     />
   );
 }

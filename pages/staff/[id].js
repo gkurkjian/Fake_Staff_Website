@@ -17,9 +17,12 @@ export default function StaffProfile() {
     if (!user) return <p>User not found</p>;
 
     return(
-        <main>
-            <h1>Staff Member</h1>
-            <Link href="/staff">Back to Staff Directory</Link>
+        <main   main>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                <h1>Staff Profile</h1>
+                <Link href="/staff" style={{ textDecoration: 'none', color: 'blue' }}>Back to Staff List</Link>
+            </div>
+            <br />
             <UserCard user={user} />
             <h2>Welcome to {user?.first_name}&apos;s page.</h2><br />
             <h3>If you would like to keep in touch consider email to {user?.first_name} at <strong>{user?.email}</strong></h3>

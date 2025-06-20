@@ -27,6 +27,19 @@ header {
   font-weight: bold;
 }
 
+a {
+  color: blue;
+  text-decoration: none;
+}
+
+a:visited {
+  color: blue;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 main {
   flex: 1;
   padding: 2rem;
